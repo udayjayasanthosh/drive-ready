@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .mi
+        {
+            width:30%;
+            height:50svh;
+            background-color: black;
+            position: relative;
+            top:150px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .left,.right
+        {
+            width:20%;
+            height:100%;
+            border-top-left-radius: 50px;
+            border-top-right-radius: 50px;
+        }
+        .left
+        {
+            background-color: #4285F4;
+        }
+        .right
+        {
+            background-color: #34A853;
+        }
+        .leftup,.rightup
+        {
+            width:66.5%;
+            height:25%;
+            position: absolute;
+            top:16%;
+        }
+        .leftup
+        {
+            left:0px;
+            background-color:red;
+            border-top-left-radius: 50px;
+            border-bottom-left-radius: 50px;
+            transform: rotate(35deg);
+            left:-4.7%;
+        }
+        .rightup
+        {
+            right:0px;
+            background-color: red;
+            border-top-right-radius: 50px;
+            border-bottom-right-radius: 50px;
+            transform:rotate(-35deg);
+            right:-4.7%;
+        }
+    </style>
+</head>
+<body>
+    <div class="mi">
+        <div class="left"></div>
+        <div class="right"></div>
+        <div class="leftup"></div>
+        <div class="rightup"></div>
+    </div>
+</body>
+</html>

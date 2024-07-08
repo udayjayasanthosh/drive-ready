@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var mp={};
+        function call(a)
+        {
+            mp[a.target.name] = a.target.value;
+        }
+        function submit()
+        {
+            Object.entries(mp).map((key, idx) => {
+                console.log(key[0], key[1], idx);
+            })
+        }
+    </script>
+    <style>
+        body
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .resume
+        {
+            width:100%;
+            height:fit-content;
+            background-color: cadetblue;
+            display: flex;
+            flex-direction: column;
+            gap:20px;
+            padding:2px;
+        }
+        .row
+        {
+            display: flex;
+            flex-wrap: wrap;
+            gap:2%;
+            justify-content: start;
+            align-items: center;
+            height:5svh;
+        }
+        label
+        {
+            width:25%;
+            font-size: 100%;
+        }
+        input,textarea
+        {
+            width:20%;
+            border-radius: 10px;
+            border: hidden;
+            height:100%;
+
+        }
+        .radio
+        {
+            width:fit-content;
+        }
+        tr input
+        {
+            width:fit-content;
+            border:solid 1px black;
+        }
+        table
+        {
+            width:100%;
+            height:25svh;
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 100%;
+        }
+        td input
+        {
+            width:100%;
+            height:100%;
+            border-radius: 0px;
+        }
+        .row1
+        {
+            width:100%;
+            height:25svh;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="resume">
+        <div class="row">
+            <label>FIRST NAME :</label>
+            <input type="text" name="firstname" onchange="call(event)">
+        </div>
+        <div class="row">
+            <label>LAST NAME :</label>
+            <input type="text" name="lasttname" onchange="call(event)">
+        </div>
+        <div class="row">
+            <label>DATE OF BIRTH :</label>
+            <input type="date" name="dateofbirth" onchange="call(event)">
+        </div>
+        <div class="row">
+            <label>FATHER NAME :</label>
+            <input type="text" name="fathername" onchange="call(event)">
+        </div>
+        <div class="row">
+            <label>MOTHER NAME :</label>
+            <input type="text" name="mothername" onchange="call(event)">
+        </div>
+        <div class="row">
+            <label>ADDRESS :</label>
+            <input type="text" name="address" onchange="call(event)">
+        </div>
+        <div class="row">
+            <label>GENDER :</label>
+            <input type="radio" name="gender" onchange="call(event)" class="radio">MALE
+            <input type="radio" name="gender" onchange="call(event)" class="radio">FEMALE
+        </div>
+        <div class="row">
+            <label>CERTIFICATIONS :</label>
+            <textarea rows="3" cols="20" onchange="call(event)" name="certificate"> </textarea>
+        </div>
+        <label>academic Details :</label>
+        <div class="row1">
+            <table>
+                <tr>
+                    <th>NI</th>
+                    <th>YEAR OF PASS</th>
+                    <th>PERCENTAGE</th>
+                    <th>PLACE</th>
+                </tr>
+                <tr>
+                    <td>
+                        sscname
+                    </td>
+                    <td>
+                        <input type="number" onchange="call(event)" name="sscyear">
+                    </td>
+                    <td>
+                        <input type="number" onchange="call(event)" name="sscpercentage">
+                    </td>
+                    <td>
+                        <input type="text" onchange="call(event)" name="sscplace">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        intername
+                    </td>
+                    <td>
+                        <input type="number" onchange="call(event)" name="interyear">
+                    </td>
+                    <td>
+                        <input type="number" onchange="call(event)" name="interpercentage">
+                    </td>
+                    <td>
+                        <input type="text" onchange="call(event)" name="interplace">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                     btechname
+                    </td>
+                    <td>
+                        <input type="number" onchange="call(event)" name="btechyear">
+                    </td>
+                    <td>
+                        <input type="number" onchange="call(event)" name="btechpercentage">
+                    </td>
+                    <td>
+                        <input type="text" onchange="call(event)" name="btechplace">
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="row">
+            <label>SKILLS :</label>
+            <input type="text" name="skills" onchange="call(event)">
+        </div>
+        <div class="row">
+            <label>HOBBIES :</label>
+            <textarea rows="3" cols="20" onchange="call(event)" name="hobbies"> </textarea>
+        </div>
+        <div class="row">
+            <label>PROFILE PIC :</label>
+            <input type="file">
+        </div>
+        <div class="row">
+            <label>badges :</label>
+            <textarea rows="3" cols="20" onchange="call(event)" name="badges"> </textarea>
+        </div>
+        <div class="row">
+            <label>OCCUPATION:</label>
+            <input type="text" name="occupation" onchange="call(event)">
+        </div>
+        <button onclick="submit()">submit</button>
+    </div>
+</body>
+</html>

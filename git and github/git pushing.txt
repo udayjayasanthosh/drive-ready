@@ -1,0 +1,14 @@
+git config --global user.email email //linking mail
+git config --global user.name name   //user name
+cd /                                 // changing directores
+cd c
+mkdir "directory"		    // making directories
+touch "file name"		    // making file
+git init			    // creating local repository
+git add "filename"		    // adding files to it 
+git add .			    // 
+git status			    // knowing status
+git commit -m "message"		    // giving message
+git remote add origin "url"	    // adding path
+git branch -m "branch name"	    //adding branch name
+git push origin "branch name"	    // pushing the branch

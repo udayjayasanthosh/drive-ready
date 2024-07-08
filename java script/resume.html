@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .resume
+        {
+            width:100%;
+            height:100svh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: burlywood;
+            gap:10px;
+        }
+        .row
+        {
+            width:100%;
+            height:fit-content;
+            display: flex;
+            justify-content:start;
+            align-items: center;
+            gap:10px;
+        }
+        input{
+            border-radius: 8px;
+            border: hidden;
+        }
+        .row1
+        {
+            width:100%;
+            justify-content: start;
+            display: flex;
+            gap:10px;
+            align-items: center;
+        }
+        label
+        {
+            width:10%;
+            display: flex;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+    <script>
+        var name;
+        var firstname;
+        var middlename;
+        var lastname;
+        var rollNO;
+        var gender;
+        var number;
+        var dateofbirth;
+        var email;
+        function calling(a)
+        {
+            if(a.target.name=="firstname")
+            {
+                firstname=a.target.value;
+            }
+            else if(a.target.name=="lastname")
+            {
+                lastname=a.target.value;
+            }
+            else if(a.target.name=="middlename")
+            {
+                middlename=a.target.value;
+            }
+            else if(a.target.name=="roll")
+            {
+                rollNO=a.target.value;
+            }
+            else if(a.target.name=="ge")
+            {
+                gender=a.target.value;
+            }
+            else if(a.target.name=="email")
+            {
+                email=a.target.value;
+            }
+            else if(a.target.name=="date")
+            {
+                dateofbirth=a.target.value;
+            }
+            else if(a.target.name=="num")
+            {
+                number=a.target.value;
+            }
+        }
+        
+        function submitted()
+        {
+            name=firstname+middlename+lastname;
+            console.log("name =",name);
+            console.log("rollNO =",rollNO);
+            console.log("gender =",gender);
+            console.log("number =",number);
+            console.log("email =",email);
+            console.log("date of birth =",dateofbirth); 
+        }
+    </script>
+</head>
+<body>
+    <div class="resume">
+    <div class="row">
+    <label>FIRST NAME:</label>
+    <input type="text" name="firstname" onchange="calling(event)">
+    <label>MIDDLE NAME:</label>
+    <input type="text" name="middlename" onchange="calling(event)">
+    <label>LAST NAME:</label>
+    <input type="text" name="lastname" onchange="calling(event)">
+    </div>
+    <div class="row1">
+    <label>ROLL NO:</label>
+    <input type="text" name="roll" onchange="calling(event)">
+    </div>
+    <div class="row1">
+    <label>GENDER :</label>
+    <input type="radio" value="MALE" name="ge" onchange="calling(event)">male
+    <input type="radio" value="female" name="ge" onchange="calling(event)">Female
+    </div>
+    <div class="row1">
+        <label>EMAIL:</label>
+        <input type="email" name="email" onchange="calling(event)">
+    </div>
+    <div class="row1">
+    <label>PHONE NUMBER :</label>
+    <input type="number" name="num" onchange="calling(event)">
+    </div>
+    <div class="row1">
+        <label>DATE OF BIRTH :</label>
+        <input type="date" name="date" onchange="calling(event)">
+    </div>
+    <button onclick="submitted()">submit</button>
+    </div>
+</body>
+</html>

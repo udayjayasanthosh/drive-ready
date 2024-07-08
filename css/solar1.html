@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            padding:0px;
+            margin:0px;
+        }
+        .main
+        {
+            width:100%;
+            height:100svh;
+            background-color: rgb(123, 168, 32);
+            background-image: url("https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L3JtMjA5LWFkai0wOV8xLmpwZw.jpg");
+            display: flex;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            justify-content: center;
+            align-items: center;
+
+        }
+        .mooony
+        {
+            width:45%;
+            height:20svh;
+            display:flex;
+            justify-content: space-between;
+            animation-name: MOON;
+            animation-iteration-count: infinite;
+            animation-duration: 10s;
+            animation-timing-function: ease-out;
+           
+        }
+        .earth
+        {
+            position: absolute;
+            top:23%;
+            left:35%;
+            width:30%;
+            height:60%;
+            background-image:url("../earth-11015_640-removebg-preview.png");
+            background-repeat: no-repeat;
+            background-size:100% 100%;
+            display:flex;
+            border-radius: 100%;
+        }
+        .mon
+        {
+            position:relative;
+            width:20%;
+            height:100%;
+            background-color: aliceblue;
+            border-radius: 50%;
+            
+        }
+        .sun
+        {
+            position:relative;
+            width:20%;
+            height:100%;
+            background-color: orange;
+            border-radius: 50%;
+        }
+        @keyframes MOON {
+            0%
+            {
+                transform: rotate(0deg);
+           }
+           
+            100%
+            {
+                transform:rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="earth"></div>
+        <div class="mooony">
+            <div class="mon"></div>
+            <div class="sun"></div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    
+    <script>
+        // Create the input dynamically
+        const newInput = document.createElement('input');
+        newInput.type = 'text';
+        newInput.id = 'myDynamicInput';
+        document.body.appendChild(newInput);
+
+        // Add an event listener to get the value when it changes
+        newInput.addEventListener('change', () => {
+        const inputValue = newInput.value;
+        console.log('Input value:', inputValue);
+        });
+    </script>
+</body>
+</html>

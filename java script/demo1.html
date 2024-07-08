@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body
+        {
+            background-color:grey;
+        }
+        img
+        {
+            position: relative;
+            width:50%;
+            height:100%;
+            border-radius: 8px;
+        }
+        .right
+        {
+            position: relative;
+            width:40%;
+            height:100%;
+        }
+        .com
+        {
+            display: flex;
+            width:100%;
+            height:60svh;
+            gap:5%;
+        }
+    </style>
+    <script>
+        var a=true;
+        var b="Titan has come a long way since 1984 when we started with one product category. Today, with over 8,000 employees and about 38,000 in the overall Titan ecosystem, 16 brands and over 2,000 retail stores, we are as committed  as ever to delivering profitable and responsible growth for all our stakeholders.Titan is India's leading lifestyle company and among the most admired and respected corporates in the country. We have established leading positions in the Jewellery, Watches and EyeCare categories led by our trusted brands and superior customer experience. we have also diversified into Wearables, Indian Dress Wear and Fragrances & Fashion Accessories and are driving differentiation in these lifestyle categories, underpinned by our deep understanding of customer preferences.";
+        var c="There can be no watch house less in need of an introduction than Rolex watches. It is a brand whose name echoes beyond the boundaries of our industry. Synonymous with luxury, interchangeable with quality, imbued with a heritage that no amount of money, spin, or PR stunts can synthesize, Rolex almost occupies its own territory. Sometime during the last decade, the brand founded by a wide-eyed Hans Wilsdorf in 1905 has transmogrified. It is no longer a watch brand but rather a phenomenon. The rules do not apply to this relentless juggernaut as it rolls over all-comers. No, when it comes to playing the game, Rolex has a distinct, insurmountable advantage: It wrote the rule book.Rolex SA is the leading luxury watch manufacturer in the world producing over 1.05 million watches that generate sales of over $13 billion dollars in 2022. The Swiss based Company manufactures, services, and distributes wristwatches under the Rolex and Tudor brand through authorized dealers.";
+        var d="ROLAX";
+        var e="TITAN"
+        function imae()
+        {
+            var x=document.getElementsByTagName("img")[0];
+            var y=document.getElementsByTagName("p")[0];
+            var z=document.getElementsByTagName("h1")[0];
+            if(a==true)
+            {
+                x.src="https://akm-img-a-in.tosshub.com/businesstoday/images/story/202307/titan1-sixteen_nine.jpg?size=1200:675";
+                a=false;
+                y.innerHTML=b;
+                z.innerHTML=e;
+            }
+            else
+            {
+                x.src="https://media.istockphoto.com/id/458727719/photo/rolex-deepsea-wristwatch.jpg?s=612x612&w=0&k=20&c=9hv7ESwsaurJuqlMU0vnVzIVtq8CXNGe0j_Hs3ldb4Y=";
+                a=true;
+                y.innerHTML=c;
+                z.innerHTML=d;
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="com">
+    <img src="https://media.istockphoto.com/id/458727719/photo/rolex-deepsea-wristwatch.jpg?s=612x612&w=0&k=20&c=9hv7ESwsaurJuqlMU0vnVzIVtq8CXNGe0j_Hs3ldb4Y=" onclick="imae()">
+    <div class="right">
+        <h1>ROLAX
+        </h1>
+        <p>There can be no watch house less in need of an introduction than Rolex watches. It is a brand whose name echoes beyond the boundaries of our industry. Synonymous with luxury, interchangeable with quality, imbued with a heritage that no amount of money, spin, or PR stunts can synthesize, Rolex almost occupies its own territory. Sometime during the last decade, the brand founded by a wide-eyed Hans Wilsdorf in 1905 has transmogrified. It is no longer a watch brand but rather a phenomenon. The rules do not apply to this relentless juggernaut as it rolls over all-comers. No, when it comes to playing the game, Rolex has a distinct, insurmountable advantage: It wrote the rule book.
+
+            Rolex SA is the leading luxury watch manufacturer in the world producing over 1.05 million watches that generate sales of over $13 billion dollars in 2022. The Swiss based Company manufactures, services, and distributes wristwatches under the Rolex and Tudor brand through authorized dealers.</p>
+    </div>
+    </div>
+</body>
+</html>

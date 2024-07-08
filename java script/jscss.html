@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @keyframes moving
+        {
+            0%
+            {
+                left:10px;
+            }
+            100%
+            {
+                left:100px;
+            }
+        }
+        #but
+        {
+            position: relative;
+            left:0px;
+        }
+    </style>
+</head>
+<body>
+    <p id="mi">hgt</p>
+    <p id="mi" name="pp" class="ppp">...</p>
+    <div class="ppp">knslk</div>
+    <div class="ppp">fsmklsz00</div>
+    <div id="mi">kjzfns</div>
+    <div id="mi">jnkjns.zk</div>
+    <p id="mi">jbkubkis</p>
+    <div id="styling">
+        hello i am uday
+    </div>
+    <button id="butt" onmouseenter="enter()">click mee to seee magic</button>
+    <button id="but" onclick="moving()" onmouseleave="removing()">moving</button>
+    <script>
+        function he()
+        {
+            console.log(document.getElementsByTagName("p")[0].innerHTML);
+            console.log(document.getElementsByName("pp")[0].innerHTML);
+            console.log(document.getElementsByClassName("ppp")[0].innerHTML);
+            console.log(document.getElementById("mi").innerHTML);
+            document.getElementById("styling").style="color:red;width:100px;height:100px;background-color:black;"
+        }
+        function enter()
+        {
+            document.getElementsByTagName("p")[0].style="color:red;"
+        }
+        function moving()
+        {
+            document.getElementById("but").style="animation-name:moving;animation-duration:2s;"
+            console.log("hi")
+        }
+        function removing(){
+            document.getElementById("but").style.counterReset;
+        }
+
+        he();
+    </script>
+</body>
+</html>

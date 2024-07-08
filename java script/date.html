@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var a=new Date();
+        document.write(a.getDate()+"-"+(a.getMonth()+1)+"-"+a.getFullYear());
+        document.write(a);
+        var x=window.prompt("enter a number");
+        document.write(prime(x));
+        function prime(x)
+        {
+            for(var i=2;i<x;i++)
+            {
+                if(x%i==0)
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+        document.write(Math.sqrt(9));
+        document.write(Math.cbrt(27));
+        document.write(Math.trunc(3.0215));
+        document.write(Math.ceil(2.3));
+        document.write(Math.floor(4.2));
+        document.write("<br>");
+        document.write(Math.random()*100);
+        document.write("<br>");
+        document.write((Math.random()*50)+50);
+        document.write(window.confirm("hello i am checking you"));
+    </script>
+</head>
+<body>
+</body>
+</html>

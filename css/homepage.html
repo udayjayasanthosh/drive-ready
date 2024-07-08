@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body
+        {
+            width:100%;
+            height:100svh;
+            background-color: rgb(13, 13, 17);
+        }
+        .upper
+        {
+            position: relative;
+            width:100%;
+            height:6%;
+            background-color: red;
+        }
+        .gmail
+        {
+            position: absolute;
+            color:grey;
+            top:25%;
+            right:15%;
+            text-decoration: none;
+
+        }
+        .upup
+        {
+            width:100%;
+            height:4%;
+            background-color: yellow;
+        }
+        .image
+        {
+            position: absolute;
+            color:grey;
+            top:25%;
+            right:10%;
+        }
+        a:hover
+        {
+            background-color:aliceblue;
+            color:black;
+            font-weight:150px;
+        }
+        a
+        {
+            text-decoration: none;
+            color:grey;
+            font-weight:250px;  
+        }
+        .searchlab
+        {
+            position: absolute;
+            color:grey;
+            top:25%;
+            right:5%
+        }
+        .icon
+        {
+            position: relative;
+            top:25%;
+            left:50%;
+            color:grey;
+        }
+        iframe
+        {
+            display: none;
+        }
+        .icon:hover iframe
+        {
+            position:absolute;
+            display:block;
+            right:0px;
+            top:30%;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="upup"></div>
+    <div class="upper">
+        <div class="gmail">
+            <a  href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox">Gmail</a>
+        </div>
+        <div class="image">
+            <a href="https://www.google.com/imghp?hl=en&tab=ri&ogbl">Image</a>
+        </div>
+        <div class="searchlab">
+            <a href="https://labs.google.com/search?source=ntp">search lab</a>
+        </div>
+    </div>
+    <div class="icon">
+        icons
+        <iframe width="500px" height="250px" src="./logo.html"></iframe>
+    </div>
+</body>
+</html>

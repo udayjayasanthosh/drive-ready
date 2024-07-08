@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile app development</title>
+    <style>
+        body
+        {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #F2F2F2;
+
+        }
+        .mi
+        {
+            width:100%;
+            height:90svh;
+            background-image: url("../WhatsApp\ Image\ 2024-06-24\ at\ 16.05.49_6cdd3ee7.jpg");
+            background-size: 100% 100%;
+            filter: blur(3px);
+        }
+        .im
+        {
+            width:100%;
+            height:100%;
+        }
+        .block
+        {
+            width:35%;
+            height:50%;
+            position: absolute;
+            top:40%;
+            right:3%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .c1
+        {   
+            width:98%;
+            height:49%;
+            display: flex;
+            justify-content: space-around;
+        }
+        .m
+        {
+            width:40%;
+            height:80%;
+            background-color:#FFFFFF;
+            border-radius: 10%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .i
+        {
+            width:40%;
+            height:40%;
+            border-radius: 50%;
+        }
+        .m:hover,.com:hover,.learnmore:hover{
+            transform: scale(1.2);
+        }
+        .co
+        {
+            width:fit-content;
+            height:10svh;
+            font-weight: bolder;
+            font-size: 200%;
+            text-align: center;
+        }
+        .c
+        {
+            text-align: center;
+        }
+        .up
+        {
+            width:70%;
+            display: flex;
+            height:25svh;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .com
+        {
+            width:45%;
+            height:90%;
+            border-radius:20px;
+            background-color: #FFFFFF;
+            display:flex;
+            border:solid 2px;
+            box-shadow: 0px 0px 5px black;
+        }
+        .ii
+        {
+            position: relative;
+            left:5%;
+            top:15%;
+            width:20%;
+            height:30%;
+            border-radius: 50%;
+        }
+        .cc
+        {
+            position: relative;
+            left:12%;
+            top:10%;
+            display: flex;
+            flex-direction: column;
+            gap:12%;
+
+        }
+        .pin
+        {
+            width:80%;
+            height:fit-content;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+        }
+        .middle
+        {
+            width:100%;
+            height:150svh;
+            background-color:#FAFAFA;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+           
+        }
+        .blue
+        {
+            position:relative;
+            display: flex;
+            flex-direction: column;
+            background-color:#1847B8;
+            top:2%;
+            width:50%;
+            height:40%;
+            border-radius: 3%;
+           
+        }
+        .hea
+        {
+            font-weight:bolder;
+            font-size:200%;
+            width:60%;
+            height:fit-content;
+            color:#F2F2F2;
+            margin:2%;
+        }
+        .ir
+        {
+            width:60%;
+            height:fit-content;
+            color: #FFFFFF;
+            margin:2%;
+            font-size: 150%;
+        }
+        .learnmore
+        {
+            position: relative;
+            left:5%;
+            width:fit-content;
+            height:fit-content;
+            text-align: center;
+            border:solid white 1px;
+            border-radius: 8px;
+            align-items: center;
+            padding:1% 2%;
+            background-color: #1847B8;
+            color:#F2F2F2
+        }
+        .person
+        {
+            position:absolute;
+            width:55%;
+            height:100%;
+            top:18%;
+            right:-15%;
+            background-color: #E0E4E7;
+            border-radius: 2%;
+            display: flex;
+            align-items: center;
+        }
+        .matter
+        {
+            width:95%;
+            height:45%;
+            position: relative;
+            top:10%;
+            display: flex;
+            padding:2px;
+            justify-content: space-around;
+            align-items: center;
+
+        }
+        .m3
+        {
+            width:20%;
+            height:90%;
+        }
+        .m2
+        {
+            width:100%;
+            height:100%;
+        }
+        .m4
+        {
+            width:70%;
+            height:100%;
+        }
+        .p1
+        {
+            width:fit-content;
+            height:10%;
+            text-align: center;
+            font-size: 150%;
+        }
+        .p2
+        {
+           
+            text-align: center;
+            font-size: 250%;
+        }
+        .p3
+        {
+            width:90%;
+            height:20%;
+            font-size: 150%;
+        }
+        .lo
+        {
+            width:100%;
+            height:25svh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .inner
+        {
+            width:80%;
+            height:80%;
+            background-color:#FFFFFF;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+        .cooo
+        {
+            width:50%;
+            height:90%;
+            margin-left: 20%;
+        }
+        .o
+        {
+            font-size: 200%;
+        }
+        .po
+        {
+            width:60%;
+            font-size: 125%;
+        }
+    </style>
+</head>
+<body>
+    <div class="mi">
+    <div class="im">
+        <div class="block">
+            <div class="c1">
+                <div class="m">
+                    <img src="../Screenshot 2024-06-24 111339.png" class="i">
+                    <p>STRATEGY</p>
+                </div>
+                <div class="m">
+                    <img src="../Screenshot 2024-06-24 134554.png" class="i">
+                    <p>UX DESIGN</p>
+                </div>
+            </div>
+            <div class="c1">
+                <div class="m">
+                    <img src="../Screenshot 2024-06-24 134701.png" class="i">
+                    <p>DEVELOPMENT</p>
+                </div>
+                <div class="m">
+                    <img src="../Screenshot 2024-06-24 134811.png" class="i">
+                    <p>TESTING</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="co">
+        <p>WE CREATE SUPER - AWESOME DESIGN</p>
+    </div>
+    <div class="c">
+        <p>dius aute irure dolor in reprehenderit in voluptate velit esse cillium doloreeu </p>
+        <p>fugiat nulla pariatur. Excepteur sint occaecat cupdiatat non proident</p>
+    </div>
+    <div class="up">
+        <div class="com">
+            <img src="../Screenshot 2024-06-24 153451.png" class="ii">
+            <div class="cc">
+                <div class="pin"><b>AMAZING DESIGN</b></div>
+                <div class="pin">sample text, click to select the text box,click again or double click to start editing the text </div>
+            </div>
+        </div>
+        <div class="com">
+            <img src="../Screenshot 2024-06-24 153451.png" class="ii">
+            <div class="cc">
+                <div class="pin"><b>COPY WRITING</b></div>
+                <div class="pin">sample text, click to select the text box,click again or double click to start editing the text </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="up">
+        <div class="com">
+            <img src="../Screenshot 2024-06-24 153451.png" class="ii">
+            <div class="cc">
+                <div class="pin"><b>DEVELOPMENT</b></div>
+                <div class="pin">sample text, click to select the text box,click again or double click to start editing the text </div>
+            </div>
+        </div>
+        <div class="com">
+            <img src="../Screenshot 2024-06-24 153451.png" class="ii">
+            <div class="cc">
+                <div class="pin"><b>24/7 SUPPORT</b></div>
+                <div class="pin">sample text, click to select the text box,click again or double click to start editing the text </div>
+            </div>
+        </div>
+    </div>
+    <div class="middle">
+        <div class="blue">
+            <div class="hea">
+                WHY YOU CHOOSE UX STUDIO AS YOUR APP DESIGN PARTNER ?
+            </div>
+            <div class="ir">Duis aute iruire dolor in reprehendrit in volupatate vesi esse cillium dolar eu fugait nulla pariatur Excepteur sit occaet cupidatet non prodient, sunt in culpa qui officia deserrunt</div>
+            <div class="learnmore">learnmore</div>
+            <div class="person"><img src="../man1.png"></div>
+        </div>
+        <div class="matter">
+            <div class="m3"><img class="m2" src="../images.jpeg"></div>
+            <div class="m4">
+                <p class="p1">ABOUT US</p>
+                <b class="p2">BUILD YOUR DREAM </b>
+                <b class="p2">WEBSITE TODAY</b>
+                <p class="p3">Article evident arrived express highest men did boy. Mistress sensible entirely am so. Quick can manor smart money hopes worth too. Comfort produce husband boy her had hearing. Law others theirs passed but wishes. You day real less till dear read.</p>
+                <ul>
+                    <li> support via e-mail and phone</li>
+                    <li>Multi Language Support</li>
+                </ul>
+                <div class="learnmore">follow</div>
+            </div>
+        </div>
+    </div>
+    <div class="lo">
+        <div class="inner">
+            <img src="../Screenshot 2024-06-24 212233.png">
+            <div class="cooo">
+                <b class="o">Lets Get's Started</b>
+                <p class="po">have a project or partnership in mind contact us today for free Consultation</p>
+            </div>
+            <div class="learnmore">CONTACT US</div>
+        </div>
+    </div>
+</body>
+</html>

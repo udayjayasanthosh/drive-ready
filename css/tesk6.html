@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>web page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body
+        {
+            display:flex;
+
+            background-color: black;
+        }
+        .main
+        {
+            position: relative;
+            width:75%;
+            height:100svh;
+            display:flex;
+            flex-direction: column;
+            left:15%;
+        }
+        .upper
+        {
+            width:100%;
+            position: relative;
+            height:50%;
+            background:linear-gradient(to bottom left, #6DB9B7,#549DA6,#286985);
+        }
+        .lower
+        {
+            width:100%;
+            position: relative;
+            height:50%;
+            background-color:#82CFC7;
+        }
+        .h
+        {
+            position: relative;
+            width:100%;
+            height:15%;
+            top:2px;
+            display:flex;
+            justify-content: space-around;
+        }
+        .icon
+        {
+            width:10%;
+            height:100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .taggings
+        {
+            width:50%;
+            height:100%;
+            display:flex;
+            text-align: center;
+            justify-content: space-between;
+            align-items: center;
+            margin:1px;
+            color: WHITE;
+            font-weight: lighter;
+            font-family:serif;
+            font-size:smaller;
+            margin-right: 20%;
+        }
+        .profile
+        {
+            width:fit-content;
+            height:fit-content;
+            display: inline-table;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            top:10%;
+        }
+        .im
+        {
+            border-radius: 70%;
+        }
+        .topic
+        {
+            margin:7%;
+            font-size:larger;
+            font-weight: bolder;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+        }
+        .discover
+        {
+            position: relative;
+            top:20%;
+            left:25%;
+            width:fit-content;
+            height:fit-content;
+            color:white;
+            font-weight: bolder;
+            font-size:50px;
+        }
+        .tagline
+        {
+        position: relative;
+            top: 22%;
+            left:33%;
+            color:#0F5372;
+            font-weight:bold;
+            font-size:larger;
+            width:fit-content;
+            height:fit-content;
+        }
+        .search
+        {
+            position: relative;
+            top:28%;
+            left:23%;
+            width:fit-content;
+            height:fit-content;
+            border-radius:20px;
+            background-color:#FFFFFF;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding:1%;
+        }
+        .in
+        {
+            width:400px;
+            height:30px;
+            margin-left:20px;
+            margin-right:20px;
+            border-style: hidden;
+        }
+        .butt
+        {
+            width:80px;
+            padding:5px;
+            height:30px;
+            border-style: hidden;
+            border-radius: 20px;
+            background-color: aqua;
+            color:white;
+            text-align: center;
+        }
+        .part1
+        {
+            position: absolute;
+            top:45%;
+            left:13%;
+            width:28%;
+            height:45%;
+            border-radius: 20px;
+            background-color:#FFFFFF;
+            z-index:10;
+            padding:2px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .part2
+        {
+            position: absolute;
+            width:100%;
+            height:100%;
+            border-radius: 20px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding:2px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+        }
+        .part
+        {
+            position: absolute;
+            top:45%;
+            width:50%;
+            height:45%;
+            left:45%;
+            border-radius: 20px;
+            background-image: url("https://www.dillify.in/images/businesswoman-using-tablet-analysis.jpg") ,linear-gradient(to bottom left, #6DB9B7,#549DA6,#286985);;
+            background-repeat: no-repeat;
+            background-blend-mode:multiply;
+            background-size: cover;
+        }
+        .h2
+        {
+            position: relative;
+            top:3%;
+            width:90%;
+            height:10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .b
+        {
+            background-color: #01AEFD;
+            padding:2px;
+            border-radius: 5px;
+        }
+        .pp
+        {
+            width:90%;
+            height: fit-content;
+            font-size:larger;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-weight: lighter;
+            color:black;
+
+        }
+        .ppp
+        {
+            width:90%;
+            height: fit-content;
+            font-size:larger;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-weight: lighter;
+            color:white;
+
+        }
+        .web
+        {
+            font-size: 25px;
+            font-weight:bolder;
+        }
+        .l
+        {
+            position: relative;
+            right:209px;
+        }
+        .share
+        {
+            color:white;
+            font-size: larger;
+        }
+        .last
+        {
+            width:90%;
+            height:10%;
+            display: flex;
+            position: relative;
+            bottom:-25%;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .ic
+        {
+            position: absolute;
+            left:13%;
+            margin-right:200px;
+            display:flex;
+            gap:20px;
+            justify-content: space-around;
+        }
+        .fill
+        {
+            width:fit-content;
+            height:fit-content;
+            background-color: #01AEFD;
+            padding:6px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+        }
+        .imm
+        {
+            width:100%;
+            height:45%;
+            image-resolution:inherit;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="upper">
+            <div class="h">
+                <div class="icon">
+                    <i class="fa-solid fa-clone"></i>
+                    <p class="topic">TOPIC</p>
+                </div>
+                <div class="taggings">
+                    <p>HOME</p>
+                    <p> BROWSE TOPICS</p>
+                    <p> HOW IT WORK</p>
+                    <P> FAQS</P>
+                    <P> CONTACT</P>
+                    <P>PAGES</P>
+                </div>
+                <div class="profile">
+                    <img  class="im"src="https://t3.ftcdn.net/jpg/06/19/26/46/360_F_619264680_x2PBdGLF54sFe7kTBtAvZnPyXgvaRw0Y.jpg" width="40px" height="40px">
+                </div>
+            </div>
+            <hr>
+            <div class="discover">
+                Discover. Learn. Enjoy 
+            </div>
+            <div class="tagline">
+                platform for creative around the world
+            </div>
+            <div class="search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input class="in"type="text" placeholder="Desing, Code, Marketing, Finance ...">
+                <button class="butt">search</button>
+            </div>
+        </div>
+        <div class="lower">
+        </div>
+        <div class="part1">
+            <div class=h2>
+                <p class="web">Web Design</p>
+                <div class="b">14
+                </div>
+            </div>
+            <p class="pp"> when you search for free Css templates, you will notice that templateMo is one of the best web site</p>
+            <img  class="imm" src="../undraw_Remote_design_team_re_urdx.png">
+        </div>
+        <div class="part">
+        <div class="part2">
+            <div class=h2>
+                <p class="web">Finance</p>
+                <div class="b">25
+                </div>
+            </div>
+            <p class="ppp">Topic Listing Template includes homepage, listing page, detail page, and contact page. You can feel free to edit and adapt for your CMS requirements</p>
+            <div class="l"><button class="butt">Learn More</button></div>
+            <div class="last">
+                <p class="share">Share :</p>
+                <div class="ic">
+                    <div class="fill">
+                        <i class="fa-brands fa-twitter"></i>
+                    </div>
+                    <div class="fill">
+                        <i class="fa-brands fa-facebook"></i>
+                    </div>
+                    <div class="fill">
+                        <i class="fa-brands fa-pinterest"></i>
+                    </div>
+                </div>
+                <i class="fa-regular fa-bookmark"></i>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+</html>

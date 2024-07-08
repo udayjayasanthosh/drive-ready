@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    body
+    {
+        padding:0px;
+        margin:0px;
+    }
+    .main
+    {
+        width:100%;
+        height:100svh;
+        background-image: url("https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L3JtMjA5LWFkai0wOV8xLmpwZw.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .sun
+    {
+        position: absolute;
+        width:8%;
+        height:18%;
+        animation-name: sunni;
+        animation-duration: 5s;
+        animation-timing-function: linear;
+        border-radius: 50%;
+        animation-iteration-count: infinite;
+        background-color:orange;
+        box-shadow: 0px 0px 10px black;
+    }
+    .moon
+    {
+        position: absolute;
+        width:8%;
+        height:18%;
+        animation-name: monny;
+        animation-duration: 5s;
+        animation-timing-function: linear;
+        border-radius: 50%;
+        animation-iteration-count: infinite;
+        box-shadow: 0px 0px 1px black;
+        background-color:white;
+    }
+    .moonpart1
+    {
+        position: absolute;
+        width:15%;
+        height:65%;
+        border-top-right-radius: 50%;
+        border-bottom-right-radius:50%;
+        animation-name: part1;
+        animation-duration: 5s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+
+    }
+    .moonpart2
+    {
+        position: absolute;
+        width:12.5%;
+        background-color:rgba(0, 0, 0, 0.5);
+        height:53%;
+        border-top-left-radius: 550px;
+        border-bottom-left-radius:550px;
+        animation-name: part2;
+        animation-duration: 5s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+
+    }
+    @keyframes sunni
+    {
+        0%
+        {
+            transform:rotate(0deg) translateX(300px);
+        }
+        100%
+        {
+            transform:rotate(360deg) translateX(300px);
+        }
+    }
+    @keyframes monny
+    {
+        0%
+        {
+            transform:rotate(0deg) translateX(-300px);
+        }
+        100%
+        {
+            transform:rotate(360deg) translateX(-300px);
+        }
+    }
+    @keyframes part1
+    {
+        0%
+        {
+            transform:rotate(0deg) translateX(100px);
+        }
+        100%
+        {
+            transform:rotate(360deg) translateX(100px);
+        }
+    }
+    @keyframes part2
+    {
+        0%
+        {
+            transform:rotate(0deg) translateX(-100px);
+        }
+        100%
+        {
+            transform:rotate(360deg) translateX(-100px);
+        }
+    }
+    .earth
+    {
+        position: absolute;
+        top:23%;
+        left:35%;
+        width:30%;
+        height:60%;
+        background-image:url("../earth-11015_640-removebg-preview.png");
+        background-repeat: no-repeat;
+        background-size:100% 100%;
+        display:flex;
+        border-radius: 100%;
+    }
+</style>
+</head>
+<body>
+    <div class="main">
+        <div class="sun"></div>
+        <div class="moon"></div>
+        <div class="earth"></div>
+        <div class="moonpart1"></div>
+        <div class="moonpart2"></div>
+    </div>
+</body>
+</html>

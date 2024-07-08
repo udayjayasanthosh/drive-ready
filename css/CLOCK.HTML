@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .main
+        {
+            width:600px;
+            height:600px;
+            transform: rotate(270deg);
+        }
+        .clock
+        {
+            width:100%;
+            height:100%;
+            background-image: url("../png-transparent-social-media-marketing-time-management-clock-clock-without-hands-angle-content-marketing-time-removebg-preview.png");
+            border-radius: 50%;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+        .hours
+        {
+            position: absolute;
+            top:49%;
+            left:50%;
+            width: 100px;
+            height:2%;
+            background-color: black;
+            transform-origin: center left;
+            animation-name: rotate;
+            animation-duration:86400s;
+            animation-iteration-count: infinite;
+            animation-timing-function:linear;
+            border-top-right-radius: 50%;
+            border-bottom-right-radius: 50%;
+            box-shadow: 0px 0px 10px black;
+        }
+        .minutes
+        {
+            position: absolute;
+            top:49%;
+            left:50%;
+            width: 200px;
+            height:2%;
+            background-color:black;
+            transform-origin: center left;
+            animation-name: rotate;
+            animation-duration:3600s;
+            animation-iteration-count: infinite;
+            animation-timing-function:linear;
+            border-top-right-radius: 50%;
+            border-bottom-right-radius: 50%;
+            box-shadow: 0px 0px 10px black;
+
+        }
+        .seconds
+        {
+            position: absolute;
+            top:49%;
+            left:50%;
+            width: 255px;
+            height:0.5%;
+            background-color: red;
+            transform-origin: center left;
+            animation-name: rotate;
+            animation-duration: 60s;
+            animation-iteration-count: infinite;
+            animation-timing-function:linear;
+            border-top-right-radius: 50%;
+            border-bottom-right-radius: 50%;
+            box-shadow: 0px 0px 5px black;
+
+        }
+        @keyframes rotate
+        {
+            0% {transform: rotate(0deg);}
+            100% {transform: rotate(359deg);}
+        }
+    </style>
+</head>
+<body>
+        <div class="main">
+            <div class="clock">
+                <div class="hours"></div>
+                <div class="minutes"></div>
+                <div class="seconds"></div> 
+            </div>
+        </div>
+</body>
+</html>

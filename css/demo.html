@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding:20%;
+        }
+        .parent{
+            width:80%;
+            height:80svh;
+            border:2px solid black;
+            position: relative;
+        }
+        .child1{
+            position: absolute;
+            width:100%;
+            height:50%;
+            top:0px;
+            background-color: rgb(177, 216, 18);
+            perspective: 100px;
+           
+        }
+        .child2
+        {
+            position: absolute;
+            width:50%;
+            height:100%;
+            right:0px;
+            background-color: rgb(24, 99, 18);
+            perspective: 100px;
+
+        }
+        .child3{
+            position: absolute;
+            width:100%;
+            height:50%;
+            bottom:0px;
+            background-color: rgb(11, 11, 9);
+        }
+        .child4
+        {
+            position: absolute;
+            left:0px;
+            width:50%;
+            height:100%;
+            background-color: rgb(234, 237, 234);
+        }
+        .c1
+        {
+            position: relative;
+            width:100%;
+            height:50%;
+            transform-style: preserve-3d;
+            transform:rotateX(90deg);
+        }
+        .c2
+        {
+            position: relative;
+            width:50%;
+            height:100%;
+            left:0px;
+            transform-style: preserve-3d;
+            transform:rotateY(90deg);
+            background-color: cadetblue;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="child1">
+            <div class="c1"></div>
+        </div>
+        <div class="child2">
+            <div class="c2"></div>
+        </div>
+        <div class="child3"></div>
+        <div class="child4"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body
+        {
+            padding:0px;
+            margin:0px;
+        }
+        .main
+        {
+            width:100%;
+            height:100svh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        @keyframes sunni
+        {
+            0%
+            {
+                transform:rotate(0deg) translateX(250px);
+            }
+            100%
+            {
+                transform:rotate(360deg) translateX(250px);
+            }
+        }
+        @keyframes monny
+        {
+            0%
+            {
+                transform:rotate(0deg) translateX(-250px);
+            }
+            100%
+            {
+                transform:rotate(360deg) translateX(-250px);
+            }
+        }
+        .sun
+         {
+        position: absolute;
+        width:10%;
+        height:20%;
+        animation-name: sunni;
+        animation-duration: 5s;
+        animation-timing-function: linear;
+        border-radius: 50%;
+        animation-iteration-count: infinite;
+        background-color:orange;
+    }
+    .moon
+    {
+        position: absolute;
+        width:10%;
+        height:20%;
+        animation-name: monny;
+        animation-duration: 5s;
+        animation-timing-function: linear;
+        border-radius: 50%;
+        animation-iteration-count: infinite;
+        background-color:white;
+    }
+    .up
+    {
+        width:100%;
+        height:50%;
+        animation-name:u;
+        animation-duration: 5s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+    .down
+    {
+        width:100%;
+        height:50%;
+        animation-name:d;
+        animation-duration: 5s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+    @keyframes u
+    {
+        0%
+        {
+            background-color:grey;
+        }
+        100%
+        {
+            background-color:white;
+        }
+    }
+    @keyframes d
+    {
+        0%
+        {
+            background-color: white;
+        }
+        100%
+        {
+            background-color:grey;
+        }
+    }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="up"></div>
+        <div class="down"></div>
+        <div class="sun"></div>
+        <div class="moon"></div>
+    </div>
+</body>
+</html>

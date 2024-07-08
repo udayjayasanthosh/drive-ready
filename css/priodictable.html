@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .table
+        {
+            width:100%;
+            height:100svh;
+            padding:0px;
+            margin:0px;
+            background-color: black;
+        }
+        .row
+        {
+            position: relative;
+            display:flex;
+            flex-direction: row;
+            width:100%;
+            height:8%;
+            background-color: white;
+        }
+        .cell
+        {
+            position:relative;
+            width:5%;
+            height:100%;
+            background-color:#2A4165;
+        }
+        .part1
+        {
+            position: relative;
+            display: flex;
+            width:50%;
+            height:100%;
+            background-color: aqua;
+        }
+        .part2
+        {
+            position: relative;
+            display: flex;
+            width:50%;
+            height:100%;
+            justify-content: end;
+            background-color: beige;
+        }
+        .one
+        {
+            position:relative;
+            width:5%;
+            height:100%;
+            background-color:#2A4165;
+            text-align: center;
+            font-size: 100%;
+        }
+        .two
+        {
+            position:relative;
+            width:5%;
+            height:100%;
+            background-color:#2A4165;
+        }
+        .one:hover
+        {
+            transform: scale(2.0);
+            z-index:10;
+        }
+    </style>
+</head>
+<body>
+    <div class="table">
+        <div class="row">
+           <div class="part1">
+            <div class="one">H</div>
+           </div>
+           <div class="part2">
+            <div class="two">He</div>
+           </div>
+        </div>
+        <div class="row">
+           <div class="part1"></div>
+           <div class="part2"></div>
+        </div>
+        <div class="row">
+           <div class="part1"></div>
+           <div class="part2"></div>
+        </div>
+    </div>
+</body>
+</html>

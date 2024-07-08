@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio</title>
+    <style>
+        .main
+        {
+            width:100%;
+            height:100svh;
+            margin:0px;
+            background-color:#F8F6FF;
+        }
+        .head
+        {
+            top:1%;
+            width:100%;
+            height:10%;
+            display:flex;
+            background-color:#FFFFFF;
+            justify-content:center;
+            align-items: center;
+            box-shadow: 2px 2px 5px rgb(70, 68, 68);
+        }
+        .preview
+        {
+            width:8%;
+            height:60%;
+            background-color:#94E048;
+            border-radius: 8px;
+            margin:1%;
+            font-size:100%;
+            font-weight: 500px;
+            color: white;
+
+        }
+        .html
+        {
+            width:8%;
+            height:60%;
+            background-color:#86D3F7;
+            border-radius: 9px;
+            margin:1%;
+            color: white;
+            font-size:100%;
+            font-weight: 500px;
+        }
+        .action
+        {
+            text-align: center;
+            width:8%;
+            height:60%;
+            background-color:#F6645D;
+            border-radius: 8px;
+            margin:1%;
+            color: white;
+            font-size:100%;
+            font-weight: 500px;
+        }
+        .lmain
+        {
+            position: relative;
+            width:100%;
+            height:90%;
+            display:flex;
+            top:5%;
+            justify-content: space-around;
+        }
+        .left
+        {
+            position: relative;
+            top:0px;
+            width:22%;
+            height:70%;
+            background-color:#FFFFFF;
+            border-radius: 5%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: 2px 2px 5px rgb(70, 68, 68);
+        }
+        .right
+        {
+            position: relative;
+            width:72%;
+            height:90%;
+            display:flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .leftup
+        {
+            position: relative;
+            display:flex;
+            flex-direction: column;
+            width:90%;
+            align-items: center;
+            justify-content: center;
+            height:50%;
+            background-color:#FFFFFF;
+        }
+        .leftdown
+        {
+            position: relative;
+            width:90%;
+            align-items: center;
+            height:50%;
+            background-color:#FFFFFF;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .rightdown
+        {
+            position: relative;
+            width:95%;
+            height:53%;
+            padding-bottom: 20px;
+            border-radius: 8px;
+            background-color:#FFFFFF;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            top:3%;
+            box-shadow: 2px 2px 5px rgb(70, 68, 68);
+        }
+        .rightup
+        {
+            position: relative;
+            width:95%;
+            height:45%;
+            background-color: #FFFFFF;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            border-radius:8px;
+            box-shadow: 2px 2px 5px rgb(70, 68, 68);
+        }
+        .one
+        {
+            width:95%;
+            height:10%;
+            display:flex;
+            justify-content: space-between;
+        }
+        .lside
+        {
+            max-width:20%;
+            font-size: 100%;
+            justify-self: start;
+            align-self: center;
+        }
+        .rside
+        {
+            width:80%;
+            height:100%;
+            padding-left:2%;
+            font-size: 100%;
+            display: flex;
+            justify-self: start;
+            align-self: center;
+            align-items: center;
+            border:solid black 1px;
+            border-radius: 8px;
+        }
+        .butt
+        {
+            width:fit-content;
+            height:fit-content;
+            background-color:#007BFF;
+            color: white;
+            border-radius: 10%;
+        }
+        .pos
+        {
+            width:95%;
+            height:10%;
+            display:flex;
+            justify-content:center;
+            border:0px 0px 1px 0px;
+            border-bottom-color: black;
+            border-bottom-style: solid;
+        }
+        .fonst
+        {
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-weight: 500;
+            font-size: 100%;
+        }
+        .ranger1,.ranger2,.ranger3,.ranger4,.ranger5
+        {
+            width:90%;
+            height:150%;
+            border: 2px solid gray;
+            border-radius: 8px;
+        }
+        .ranger1::-webkit-progress-value {
+            background-color: #057BF7;
+         }
+         .ranger2::-webkit-progress-value {
+            background-color:#D33748;
+         }
+         .ranger3::-webkit-progress-value {
+            background-color:#25A745;
+         }
+         .ranger4::-webkit-progress-value {
+            background-color:#FBBF10;
+         }
+         .ranger5::-webkit-progress-value {
+            background-color:#1BA2B6;
+         }
+        .three
+        {
+            position: relative;
+            width:90%;
+            height:20%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .two
+        {
+            WIDTH:90%;
+            height: 15%;
+            text-align: start;
+            font-family: 'Times New Roman', Times, serif;
+            color: black;
+            font-weight: 500;
+        }
+        .im
+        {
+            width:30%;
+            height:40%;
+            border-radius: 80%;
+            border-color: #007BFF;
+
+        }
+        .imm
+        {
+            width:100%;
+            height:100%;
+            border-radius: 50%;
+            border-color: #007BFF;
+        }
+        .con
+        {
+            width:70%;
+            height:40%;
+            text-align: center;
+        }
+        .message
+        {
+            width:fit-content;
+            margin-left:5px;
+            height:fit-content;
+            border-radius: 10%;
+            border-color: blue;
+            background-color: white;
+            color:blue;
+        }
+        .t
+        {
+            width:90%;
+            height:15%;
+            border:0px 0px px 0px;
+            border-bottom-color: black;
+            border-bottom-style:inset;
+            padding:4px;
+        }
+        .pi
+        {
+            display: flex;
+            justify-content: space-between;
+            padding:3px;
+            align-items: center;
+            text-align: center;
+        }
+        .tt
+        {
+            width:90%;
+            height:15%;
+            border:0px 0px 1px 0px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="head">
+            <button class="preview">Preview</button>
+            <button class="html">HTML</button>
+            <button class="html">CSS</button>
+            <button class="html">Dowload</button>
+            <button class="action">Action</button>
+        </div>
+        <div class="lmain">
+            <div class="left">
+                <div class="leftup">
+                    <div class="im">
+                    <img class="imm" src="data:image/jpeg;base64,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">
+                    </div>
+                    <div class="con">
+                    <b>John Doe</b>
+                    <p>full stack developer</p>
+                    <p>Bay Area, san Francisco ,ca</p>
+                    </div>
+                    <div class="pos">
+                        <button class="butt">Follow</button>
+                        <button class="message">message</button>
+                    </div>
+                </div>
+                <div class="leftdown">
+                    <div class="t">
+                        <div class="pi">
+                            <p style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">wesite</p>
+                            <p>https://bootbay.com</p>
+                        </div>
+                    </div>
+                    <div class="t">
+                        <div class="pi">
+                        <p style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" >Github</p>
+                        <p>bootbey</p>
+                        </div>
+                    </div>
+                    <div class="t">
+                        <div class="pi">
+                        <p style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" >Twitter</p>
+                        <p>bootbey</p>
+                        </div>
+                    </div>
+                    <div class="t">
+                        <div class="pi">
+                        <p style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" >instagram</p>
+                        <p>bootbey</p>
+                        </div>
+                    </div>
+                    <div class="tt">
+                        <div class="pi">
+                        <p style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" >Facebook</p>
+                        <p>bootbey</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <div class="rightup">
+                    <div class="one">
+                        <div class="lside">FULL  NAME</div>
+                        <div class="rside">JOHN DOE</div>
+                    </div>
+                    <div class="one">
+                        <div class="lside">EMAIL</div>
+                        <div class="rside">john@example.com</div>
+                    </div>
+                    <div class="one">
+                        <div class="lside">PHONE</div>
+                        <div class="rside">(239)816-9029</div>
+                    </div>
+                    <div class="one">
+                        <div class="lside">MOBILE</div>
+                        <div class="rside">(320) 380-4539</div>
+                    </div>
+                    <div class="one">
+                        <div class="lside">ADDRESS</div>
+                        <div class="rside">Bay Area, san Franciso, CA</div>
+                    </div>
+                    <div class="po">
+                        <button class="butt"> save changes</button>
+                    </div>
+                </div>
+                <div class="rightdown">
+                    <div class="two">
+                    <b class="fonst">project Status</b> 
+                    </div>
+                    <DIV CLASS="two">
+                        <p>web design</p>
+                    </DIV>
+                    <div class="three">
+                    <progress max="100" value="82" class="ranger1"></progress>
+                    </div>
+                    <div class="two">
+                    <p>wesite markup</p>
+                </div>
+                    <div class="three">
+                    <progress max="100" value="82" class="ranger2"></progress>
+                </div>
+                    <div class="two">
+                    <p>One page</p>
+                    </div>
+                    <div class="three">
+                    <progress max="100" value="82" class="ranger3"></progress>
+                </div>
+                <div class="two">
+                    <p>Mobile Template</p>
+                </div>
+                <div class="three">
+                    <progress max="100" value="82" class="ranger4"></progress>
+                </div>
+                <div class="two">
+                    <p>BackEnd Api</p>
+                </div>
+                <div class="three">
+                    <progress max="100" value="82" class="ranger5"></progress>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

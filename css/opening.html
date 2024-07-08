@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .mai
+        {
+            width:100%;
+            height:100svh;
+            display:flex;
+            background: linear-gradient(to right bottom,#060E13,#0D498D,#0A0C15,#09152A,#033A73);
+        }
+        .earth
+        {
+            width:40%;
+            height:50%;
+            position: relative;
+            top:25%;
+            left:5%;
+            border-radius: 50%;
+            background-image: url("../Earth_6c8e2055-a159-4dd2-807b-95a29ee9d168-prv-removebg-preview\ \(1\).png");
+            background-size: 100% 100%;
+        }
+        .content{
+            width:50%;
+            height:50%;
+            background: linear-gradient(#0D498D,#132b47,#0c3059);
+            position: relative;
+            top:25%;
+            border-radius:10px;
+        }
+        .left,.right
+        {
+            position: absolute;
+            width:50%;
+            height:100%;
+            background-size: 100% 100%;
+            z-index:10;
+        }
+        .left
+        {
+            background-image: url("../Screenshot\ 2024-06-29\ 112808.png");
+            animation-name: lefty;
+            animation-duration: 1s;
+            left:-60%;
+        }
+        .right
+        {
+            background-image: url("../Screenshot\ 2024-06-29\ 112853.png");
+            animation-name: righty;
+            animation-duration: 1s;
+            right:-60%
+        }
+        @keyframes lefty
+        {
+            0%
+            {
+                left:0px;
+            }
+            100%
+            {
+                left:-60%;
+            }
+        }
+        @keyframes righty
+        {
+            0%
+            {
+                right:0px;
+            }
+            100%
+            {
+                right:-60%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="mai">
+        <div class="left"></div>
+        <div class="right"></div>
+        <div class="earth">
+        </div>
+        <div class="content"></div>
+    </div>
+</body>
+</html>

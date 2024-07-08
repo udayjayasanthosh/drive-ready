@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <style>
+            body{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding:20%;
+            }
+            .parent{
+                width:80%;
+                height:80svh;
+                border:2px solid black;
+                perspective: 100px;
+                position: relative;
+            }
+            .child1{
+                width:50%;
+                position: absolute;
+                height:20%;
+                top:15%;
+                left:25%;
+                background-color: rgb(177, 216, 18);
+                transform-style: preserve-3d;
+                transform: rotateX(-90deg);
+            }
+            .child2{
+                width:16.5%;
+                position: relative;
+                top:25%;
+                left:67%;
+                height:50%;
+                background-color: rgb(222, 202, 47);
+                transform-style: preserve-3d;
+                transform: rotateY(-90deg);
+            }
+            .child3{
+                width:50%;
+                position: absolute;
+                left:25%;
+                top:65%;
+                height:20%;
+                background-color: rgb(6, 171, 9);
+                transform-style: preserve-3d;
+                transform: rotateX(90deg);
+            }
+            .child4{
+                width:16.5%;
+                position: absolute;
+                top:25%;
+                left:16.6%;
+                height:50%;
+                background-color: rgb(31, 180, 15);
+                transform-style: preserve-3d;
+                transform: rotateY(90deg);
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="parent">
+            <div class="child1"></div>
+            <div class="child2"></div>
+            <div class="child3"></div>
+            <div class="child4"></div>
+        </div>
+    </body>
+</html>

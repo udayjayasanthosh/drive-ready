@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .i
+        {
+            width:50px;
+            height:50px;
+            background-color: brown;
+            color:white;
+        }
+        .i:hover::before{
+            content:"bvzvblh";
+            background-color: black;
+        }
+        ul li
+        {
+            list-style-type:none;
+        }
+        ul li::after
+        {
+            content:"/";
+        }
+        .but
+        {
+            position: relative;
+            width:100px;
+            height:50px;
+            background-color:black;
+            color:white;
+            border-radius:25%;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 1s;
+            z-index:9999;
+            overflow: hidden;
+        }
+        .but:hover
+        {
+            color:black;
+        }
+        .but::before
+        {
+            position: absolute;
+            content:"";
+            width:100px;
+            height:50px;
+            background-color:pink;
+            left:-200px;
+            border-radius:25%;
+            transition: all 1s;
+        }
+        .but:hover::before
+        {
+            left:0px;
+            z-index:-9999;
+        }
+        .but1
+        {
+            left:150px;
+            position: relative;
+            width:150px;
+            height:50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index:9999;
+            color:white;
+            transition: all 1s;
+
+        }
+        .but1:hover
+        {
+            color:pink;
+        }
+        .but2
+        {
+            position: absolute;
+            width:100%;
+            height:100%;
+            transform:skewX(45deg);
+            background-color:pink;
+            border:1px pink;
+            z-index:-999;
+            transition: all 1s;
+            overflow: hidden;
+       }
+       .but1:hover .but2
+       {
+        background-color: white;
+       }
+       .but2::before
+       {
+        position:absolute;
+        content:"";
+        left:600px;
+        width:150px;
+        height:50px;
+        background-color:white;
+        transition: all 1s;
+        overflow: hidden;
+
+       }
+       .but1:hover .but2::before
+       {
+        left:0px;
+        background-color: black;
+       }
+       .one
+       {
+        position: relative;
+        top:150px;
+        left:500px;
+        width:40%;
+        height:25svh;
+        background-color:grey;
+        transition: all 5s;
+        overflow: hidden;
+       }
+       .one:hover
+       {
+        background-color: red;
+       }
+       .one::before
+       {
+        position: absolute;
+        content: "";
+        bottom:100%;
+        left:100%;
+        width:100%;
+        height:25svh;
+        background-color: red;
+        transition: all 5s;
+        border-bottom-left-radius: 50px;
+
+       }
+       .one:hover::before
+       {
+        position: absolute;
+        left:0%;
+        bottom:0%;
+        border-bottom-left-radius: 0px;
+        background-color:grey;
+       }
+       .one::after
+       {
+        position: absolute;
+        content: "";
+        top:100%;
+        right:100%;
+        width:100%;
+        height:25svh;
+        background-color: red;
+        transition: all 5s;
+        border-top-right-radius: 50px;
+       }
+       .one:hover::after
+       {
+        position: absolute;
+        content:"";
+        right:0%;
+        top:0%;
+        border-top-right-radius: 0px;
+        background-color:grey;
+       }
+       .gift
+       {
+        width:50%;
+        height:50svh;
+        background-color: black;
+        position: relative;
+        top:350px;
+        left:450px;
+        perspective: 120px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        overflow: hidden;
+       }
+       .up
+       {
+        position: relative;
+        width:100%;
+        height:40%;
+        background-color:red;
+        transition: all;
+        transition-duration: 5s;
+       }
+       .low
+       {
+        position: relative;
+        width:100%;
+        height:60%;
+        background-color: blueviolet;
+        transition: all;
+        transition-duration: 5s;
+       }
+       .gift:hover .up
+       {
+        transform-style: preserve-3d;
+        transform: rotateX(15deg);
+        perspective-origin: top;
+        height:100%;
+       } 
+       .gift:hover .low
+       {
+        position:relative;
+        transform-style: preserve-3d;
+        transform: rotateX(-50deg);
+        height:100%;
+        perspective-origin: bottom;
+       }
+       .rol
+       {
+        position: relative;
+        top:500px;
+        right:-500px;
+        width:500px;
+        height:100px;
+        background-color: black;
+        border-radius: 50px;
+        transition: all 5s;
+        transition-duration: 5s;
+       }
+       .rol::before
+       {
+        content: "";
+        position: absolute;
+        width:80%;
+        height:100%;
+        background-color: gray;
+        left:100%;
+        border-radius: 50px;
+       }
+       .rol::after
+       {
+        content:"";
+        position: absolute;
+        width:80%;
+        height:100%;
+        background-color: gray;
+        top:0px;
+        right: 100%;
+        border-radius: 50px;
+        transition: all 5s;
+        transition-duration: 5s;
+       }
+       .ball
+       {
+        width:25%;
+        height:100%;
+        background-color: red;
+        border-radius:50px;
+        transition: all 5s;
+        transition-duration: 5s;
+       }
+       .rol:hover .ball
+       {
+           position: absolute;
+           margin-right:-100%;
+       }
+       .rol:hover::after
+       {
+        position: absolute;
+        background-color: red;
+        margin-right:-80%;
+       }
+    </style>
+</head>
+<body>
+    <!-- <button class="i"> apple</button>
+    <ul type="">
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+    </ul> -->
+    <div class="but">hello people</div>
+    <div class="but1">click box<p class="but2"></p></div>
+    <div class="one"></div>
+    <div class="gift">
+        <div class="up"></div>
+        <div class="low"></div>
+    </div>
+    <div class="rol">
+        <div class="ball"></div>
+    </div>
+</body>
+</html>
