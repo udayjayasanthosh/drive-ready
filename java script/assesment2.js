@@ -36,7 +36,6 @@ var b=document.getElementsByTagName("body");
 
 var t = document.createElement("table");
 
-
 var tablerow=document.createElement("tr");
 t.appendChild(tablerow);
 
@@ -49,18 +48,26 @@ age.innerHTML="age";
 var gender=document.createElement("th");
 gender.innerHTML="gender";
 
+var editing=document.createElement("th");
+editing.innerHTML="edit";
+
+var deleting=document.createElement("th");
+deleting.innerHTML="delete";
+
 tablerow.appendChild(n);
 tablerow.appendChild(age);
 tablerow.appendChild(gender);
+tablerow.appendChild(editing);
+tablerow.appendChild(deleting);
+
 
 display();
 function display()
 {
-    var tablerow=document.createElement("tr");
-    t.appendChild(tablerow); 
     for(var i=0;i<data.length;i++)
     {
         var tablerow=document.createElement("tr");
+        tablerow.id=i;
         t.appendChild(tablerow);
         var o=data[i];
         for(let key in o)
@@ -70,22 +77,39 @@ function display()
             td.innerHTML=dat;
             tablerow.appendChild(td);
         }
+        var edit_td=document.createElement("td");
+        var editbut=document.createElement("button");
+        editbut.innerHTML="edit";
+        edit_td.appendChild(editbut);
+        tablerow.appendChild(edit_td);
+        editbut.setAttribute("onclick",`edited(${i})`);
+    
+        var delete_td=document.createElement("td");
+        var deletebut=document.createElement("button");
+        deletebut.innerHTML="delete";
+        delete_td.appendChild(deletebut);
+        tablerow.appendChild(delete_td);
+        deletebut.setAttribute("onclick",`deleted(${i})`,false);
     }
 }
-var aa = "true";
-function adding()
+function edited(a)
 {
-    if(aa=="true")
-    {
-    b[0].appendChild(t);
-    aa="false";
-    }
-    else
-    {
-        gettinginput();
-    }
+    var h=document.getElementById(a);
+    var childs=h.childNodes;
+    var objects=data[a];
+    childs[0].innerHTML=window.prompt("enter new name");
+    childs[1].innerHTML=window.prompt("enter new name");
+    childs[2].innerHTML=window.prompt("enter new name");
+    objects["name"]=childs[0].innerHTML;
+    objects["age"]=childs[1].innerHTML;
+    objects["gender"]=childs[2].innerHTML;
 }
-
+function deleted(i)
+{
+    var h=document.getElementById(i);
+    console.log(i);
+    t.removeChild(h);
+}
 function gettinginput() {
     var obj=
     {
@@ -150,7 +174,10 @@ function gettinginput() {
     g.addEventListener("click",()=> {
         data.push(obj);
         var tarow=document.createElement("tr");
+        tarow.id=data.length;
         t.appendChild(tarow);
+
+        var i=data.length;
 
         var n=document.createElement("td");
         n.innerHTML=obj["name"];
@@ -163,57 +190,41 @@ function gettinginput() {
         var gender=document.createElement("td");
         gender.innerHTML=obj["gender"];
         tarow.appendChild(gender);
+
+        var edit_td=document.createElement("td");
+        var editbut=document.createElement("button");
+        editbut.innerHTML="edit";
+        edit_td.appendChild(editbut);
+        tarow.appendChild(edit_td);
+        editbut.setAttribute("onclick",`edited(${i})`);
+    
+        var delete_td=document.createElement("td");
+        var deletebut=document.createElement("button");
+        deletebut.innerHTML="delete";
+        delete_td.appendChild(deletebut);
+        tarow.appendChild(delete_td);
+        deletebut.setAttribute("onclick",`deleted(${i})`);
+        console.log(100000);
         my();
         function my()
         {
             hg[0].removeChild(diving);
-           /* hg[0].removeChild(b);
-            hg[0].removeChild(c);
-            hg[0].removeChild(d);
-            hg[0].removeChild(e);
-            hg[0].removeChild(f);
-            hg[0].removeChild(g);*/
         };
     },false)
 
 }
-var divs=document.createElement("div");
-divs.id="divs";
-document.body.appendChild(divs);
 
-var butedit=document.createElement("button");
-butedit.innerHTML="edit";
-butedit.addEventListener("click",()=>
+var aa = "true";
+function adding()
 {
-    var row=window.prompt("enter row number");
-    var rowdata=document.getElementsByTagName("td");
-    var editname=window.prompt("enter name");
-    var editage=window.prompt("enter age");
-    var editgender=window.prompt("enter gender");
-    rowdata[(row*3)-3].innerHTML=editname;
-    rowdata[(row*3)-2].innerHTML=editage;
-    rowdata[(row*3)-1].innerHTML=editgender;
-    var obly=data[row-1];
-    obly["name"]=editname;
-    obly["age"]=editage;
-    obly["gender"]=editgender;
-    console.log(data);
-
-},false);
-
-var butdelete=document.createElement("button");
-butdelete.innerHTML="delete";
-butdelete.addEventListener("click",()=>
-{
-    var rows=window.prompt("enter row number");
-    data.splice(rows-1,rows);
-    rows++;
-    var tring=document.getElementsByTagName("tr");
-    console.log(data);
-    var deletingrow=tring[rows];
-    console.log(deletingrow);
-    t.removeChild(deletingrow);
-});
-divs.appendChild(butdelete);
-divs.appendChild(butedit);
-
+    if(aa=="true")
+    {
+    b[0].appendChild(t);
+    aa="false";
+    }
+    else
+    {
+        gettinginput();
+        aa="true";
+    }
+}
