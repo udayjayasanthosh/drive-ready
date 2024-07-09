@@ -5,19 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        body
+        {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #2ec0d3;
+        }
+        body > button
+        {
+            width:10%;
+            height:5svh;
+            border:hidden;
+            border-radius: 8px;
+            background-color: orange;
+            font-weight: bolder;
+            font-family: cursive;
+            text-transform: uppercase;
+        }
         #operation
         {
+            margin:150px;
             width: 100%;
             height:10svh;
-            background-color: black;
             display: flex;
-            justify-content: space-between;
+            justify-content: space-around;
         }
         #operation button{
-            background-color: red;
-            color:white;
+            background-color: orangered;
+            color:black;
             width:200px;
             height:100%;
+            border:hidden;
+            border-radius: 8px;
+            font-weight: bolder;
+            text-transform: uppercase;
+            font-family: cursive;
+
+
         }
         table
         {
@@ -30,7 +56,7 @@
     </style>
 </head>
 <body>
-    <button onclick="main()">start</button>
+    <button onclick="main()" id="start">start</button>
     <script src="../java script/game.js">
     </script>
 </body>
