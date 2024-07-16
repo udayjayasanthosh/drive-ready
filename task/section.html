@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        padding:0px;
+        margin:0px;
+    }
+    #five
+    {
+        /*background-color: black;*/
+        width:100svw;
+        height:fit-content;
+        padding:3%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #fivemain
+    {
+        /*background-color: aliceblue;*/
+        width:80%;
+        height:fit-content;
+        display: flex;
+        flex-direction: row;
+        flex-wrap:wrap-reverse;
+        gap:5%;
+        justify-content: center;
+    }
+    #fivemainleft
+    {
+        width:500px;
+        height:600px;
+        /*background-color: aquamarine;*/
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap:6%;
+    }
+    #fivemainright
+    {
+        width:500px;
+        height:600px;
+        /*background-color: blueviolet;*/
+    }
+    #fivemainright img
+    {
+        position: relative;
+        width:90%;
+        height:90%;
+        left:0%;
+        top:0%;
+        animation-name: movingimage;
+        animation-duration:5s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+    @keyframes movingimage
+    {
+        0%
+        {
+            left:0%;
+            top:0%;
+        }
+        10%
+        {
+            left:2%;
+            top:2%;
+        }
+        20%
+        {
+            left:4%;
+            top:4%;
+        }
+        30%
+        {
+            left:6%;
+            top:6%;
+        }
+        40%
+        {
+            left:8%;
+            top:8%;
+        }
+        50%
+        {
+            left:10%;
+            top:10%;
+        }
+        60%
+        {
+            left:8%;
+            top:8%;
+        }
+        70%
+        {
+            left:6%;
+            top:6%;
+        }
+        80%
+        {
+            left:4%;
+            top:4%;
+        }
+        90%
+        {
+            left:2%;
+            top:2%;
+        }
+        100%
+        {
+            left:0%;
+            top:0%;
+        }
+    }
+    #buld 
+    {
+        width:100%;
+        height:13%;
+
+    }
+    #buld img
+    {
+        width:17%;
+        height:100%;
+        border-radius: 50%;
+    }
+    #is div
+    {
+        font-size:40px;
+        font-weight:lighter;
+    }
+    #con div
+    {
+        font-size: 100%;
+        font-weight: lighter;
+    }
+    #blo div
+    {
+        font-size: 100%;
+        font-weight: bolder;
+    }
+    #readmore button
+    {
+        width:20%;
+        height:150%;
+        border:blue solid 1px;
+    }
+    @media  screen and (max-width:500px)
+    {
+     
+        #fivemain
+        {
+            width:100%;
+            height:fit-content;
+            display:flex;
+            flex-direction:column-reverse;
+            justify-content: center;
+            align-items: center;
+            gap:20px;
+        }
+        #fivemainleft
+        {
+            width:320px;
+            height:fit-content;
+            display: flex;
+            flex-direction: column;
+        }
+        #fivemainright
+        {
+            width:320px;
+            height:50svh;
+        }
+        #fivemainleft
+        {
+            gap:10px;
+        }
+        #buld
+        {
+            height:75px;
+            margin:5px 0px;
+        }
+        #blo,#is,#con,#readmore
+        {
+            margin:5px 0px;
+        }
+        #buld img
+        {
+            width:25%;
+        }
+        #is div
+        {
+            font-size: 125%;
+        }
+        #con div
+        {
+            font-size: 1em;
+        }
+        #blo div
+        {
+            font-size: 1em;
+        }
+        #readmore button
+        {
+            height:fit-content;
+            width:fit-content;
+        }
+    }
+</style>
+<body>
+    <div id="five">
+        <div id="fivemain">
+            <div id="fivemainleft">
+                <div id="buld">
+                    <img src="./Screenshot 2024-07-12 104453.png">
+                </div>
+                <div id="is">
+                    <div>IS VR BAD FOR YOUR BRAIN</div>
+                </div>
+                <div id="con">
+                    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, mollitia accusantium, dolore dolores commodi nostrum corrupti quis assumenda iste dignissimos ab necessitatibus nobis ipsa hic maxime laudantium laboriosam delectus quas?</div>
+                </div>
+                <div id="blo">
+                    <div>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo laudantium dignissimos iure explicabo necessitatibus sed aperiam recusandae perspiciatis soluta, dolores placeat ipsum omnis pariatur, ab voluptas corporis, rerum dolorem ad.</div>
+                </div>
+                <div id="readmore">
+                    <button>See More</button>
+                </div>
+            </div>
+            <div id="fivemainright">
+                <img src="./Screenshot 2024-07-12 102622.png">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./calculator.css">
+</head>
+<body>
+    <div class="main">
+    <div id="calculator">
+        <div id="display">
+            <div id="previous"></div>
+            <div id="current"></div>
+        </div>
+        <div id="keys">
+            <div id="numbers">
+                <div class="row1">
+                    <div id="seven" onclick="number(event)">7</div>
+                    <div id="eight" onclick="number(event)">8</div>
+                    <div id="nine" onclick="number(event)">9</div>
+                </div>
+                <div class="row1">
+                    <div id="four" onclick="number(event)">4</div>
+                    <div id="five" onclick="number(event)">5</div>
+                    <div id="six" onclick="number(event)">6</div>
+                </div>
+                <div class="row1">
+                    <div id="one" onclick="number(event)">1</div>
+                    <div id="two" onclick="number(event)">2</div>
+                    <div id="three" onclick="number(event)">3</div>
+                </div>
+            </div>
+            <div id="operations">
+                <div class="row1">
+                    <div id="clear" onclick="operation(event)">CE</div>
+                    <div id="back" onclick="operation(event)">C</div>
+                    <div id="division" onclick="operation(event)">/</div>
+                </div>
+                <div class="row1">
+                    <div id="multiply" onclick="operation(event)">*</div>
+                    <div id="add" onclick="operation(event)">+</div>
+                    <div id="sub" onclick="operation(event)">-</div>
+                </div>
+                <div class="row1">
+                    <div id="equal" onclick="operation(event)">=</div>
+                    <div id="point" onclick="operation(event)">.</div>
+                    <div id="percentage" onclick="operation(event)">%</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="./calculator.js"></script>
+</body>
+</html>

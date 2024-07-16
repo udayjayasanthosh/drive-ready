@@ -166,5 +166,20 @@ function display(m,n)
 
 function keyoperation(event)
 {
-    console.log(event.code);
+    if(event.code=="ArrowUp")
+    {
+        toping();
+    }
+    else if(event.code=="ArrowDown")
+    {
+        downing();
+    }
+    else if(event.code=="ArrowRight")
+    {
+        righting();
+    }
+    else if(event.code=="ArrowLeft")
+    {
+        lefting();
+    }
 }

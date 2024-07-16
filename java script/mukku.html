@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medicine Center</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/kMVq6r+6/Th5ezW2Y3J9D7YqGR+M0HIVz8PK6hxrxp6R6FTqXFlQzjkE2jo5Zhc7s9qcl77QqqVZw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: #333;
+            line-height: 1.6;
+        }
+        header, section, footer {
+            width: 100%;
+            text-align: center;
+            padding: 50px 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .intro {
+            background: url('https://res.cloudinary.com/dh1jwsudq/image/upload/v1720356050/istockphoto-1000967062-1024x1024-transformed_ojn5rq.jpg') no-repeat center center/cover;
+            color: black;
+            text-align: left;
+            padding: 100px 20px;
+        }
+        .intro h1 {
+            color: grey;
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        .intro p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        .intro .btn {
+            padding: 10px 20px;
+            background: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .services, .pharmacy, .departments, .care, .global, .specialists, .contact {
+            padding: 50px 0;
+        }
+        .services h2, .pharmacy h2, .departments h2, .care h2, .global h2, .specialists h2, .contact h2 {
+            font-size: 32px;
+            margin-bottom: 30px;
+            color: #333;
+        }
+        .services .service, .departments .department, .pharmacy .feature, .care .card, .specialists .doctor {
+            display: inline-block;
+            width: 30%;
+            margin: 1.5%;
+            vertical-align: top;
+            text-align: center;
+            background: #f8f8f8;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .services .service h3, .departments .department h3, .pharmacy .feature h3, .care .card h3, .specialists .doctor h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .services .service p, .departments .department p, .pharmacy .feature p, .care .card p, .specialists .doctor p {
+            font-size: 16px;
+            color: #666;
+        }
+        .services .service i, .departments .department i {
+            font-size: 50px;
+            margin-bottom: 10px;
+            color: #007BFF;
+        }
+        .services .service {
+            background: #eceff1;
+        }
+        .services .service h3 {
+            color: #007BFF;
+        }
+        .departments, .pharmacy {
+            background: #f1f1f1;
+        }
+        .departments .department h3, .pharmacy .feature h3 {
+            color: #333;
+        }
+        .care .card img, .specialists .doctor img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .global {
+            background: #e8eaf6;
+        }   
+        .global .map {
+            width: 100%;
+            height: auto;
+        }
+        .specialists .doctor img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+        }
+        .contact form input, .contact form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .contact form input[type="submit"] {
+            background: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        footer {
+            background: #f8f8f8;
+            padding: 20px;
+            font-size: 14px;
+        }
+        footer p {
+            margin: 0;
+        }
+        .care-of-heart {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #f1f1f1;
+            padding: 50px 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .care-of-heart .content {
+            width: 50%;
+        }
+        .care-of-heart .content h3 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+        .care-of-heart .content p {
+            font-size: 16px;
+            color: #666;
+        }
+        .care-of-heart .image {
+            width: 45%;
+        }
+        .care-of-heart .image img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header class="intro">
+        <div class="container">
+            <h1>Medicine Center<br>On The Go!</h1>
+            <p>With our Medicine Centre app,the high-quality service<br>that we are known for is now available on your smartphone.<br>Available on the App Store and Google Play.</p>
+            <a href="#" class="btn">Read More</a>
+        </div>
+    </header>
+
+    <section class="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="service">
+                <i class="fas fa-brain"></i>
+                <h3>Neurology Care</h3>
+                <p>Sample text. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+            <div class="service">
+                <i class="fas fa-heartbeat"></i>
+                <h3>Cardiology Care</h3>
+                <p>Sample text. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+            <div class="service">
+                <i class="fas fa-procedures"></i>
+                <h3>Urology Care</h3>
+                <p>Sample text. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="pharmacy">
+        <div class="container">
+            <h2>A Modern, Full-Service Pharmacy</h2>
+            <div class="feature">
+                <i class="fas fa-pills"></i>
+                <h3>Prescription Services</h3>
+                <p>Get your prescriptions filled quickly and accurately by our experienced pharmacists.</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-clinic-medical"></i>
+                <h3>Consultation Services</h3>
+                <p>Consult with our pharmacists for advice on medication management and health concerns.</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-syringe"></i>
+                <h3>Vaccinations</h3>
+                <p>We offer a variety of vaccinations to keep you and your family healthy.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="departments">
+        <div class="container">
+            <h2>Our Departments</h2>
+            <p>Sample text. Lorem ipsum dolor sit amet, consectetur adipiscing elit, consectetur adipiscing elit<br> nullam nunc justo sagittis susipit ultrices.</p>
+        </div>
+    </section>
+
+    <section class="care-of-heart">
+        <div class="container">
+            <div class="content">
+                <h3>Care of Heart</h3>
+                <p>For nearly 25 years, thousands of medical practitioners throughout <br>the state of Utah have exclusively referred patients to Medicine <br>Center Compounding Pharmacyfor their compounded medications.<br>This is due to the combination of outstanding service, price, and <br>quality. At Medicine Center, quality is paramount. For that reason,<br>we use cutting edge technology, state-of-the-art equipment,<br>innovative bases and some of the most unique dosage forms our <br>industry has to offer.</p>
+            </div>
+            <div class="image">
+                <img src="https://res.cloudinary.com/dh1jwsudq/image/upload/v1720356044/pexels-pavel-danilyuk-7108344_usopnj.jpg" alt="Heart Care">
+            </div>
+        </div>
+    </section>
+
+    <section class="care">
+        <div class="container">
+            <h2>WE CARE</h2>
+            <P>Sample text. Lorem ipsum dolor sit amet, consectetur adipiscing elit, consectetur adipiscing elit<br> nullam nunc justo sagittis susipit ultrices.</P>
+            <div class="card">
+                <img src="https://res.cloudinary.com/dh1jwsudq/image/upload/v1720356050/pexels-pixabay-40568_ubf2of.jpg" alt="Child Care">
+                <h3>Child Care</h3>
+                <p>Sample text. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+            <div class="card">
+                <img src="https://res.cloudinary.com/dh1jwsudq/image/upload/v1720356051/pexels-fr3nks-305568_pdz5og.jpg" alt="Dental Care">
+                <h3>Dental Care</h3>
+                <p>Sample text. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+            <div class="card">
+                <img src="https://res.cloudinary.com/dh1jwsudq/image/upload/v1720356041/pexels-400574499-16167184_y9wohf.jpg" alt="Birth Care">
+                <h3>Birth Care</h3>
+                <p>Sample text. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="global">
+        <div class="container">
+            <h2>Our Global Presence</h2>
+            <img src="https://res.cloudinary.com/dh1jwsudq/image/upload/v1720356034/istockphoto-1129202526-1024x1024-transformed_ajaz38.jpg" alt="Global Presence" class="map">
+        </div>
+    </section>
+
+    <section class="specialists">
+        <div class="container">
+            <h2>Our Specialists</h2>
+            <div class="doctor">
+                <img src="https://res.cloudinary.com/dh1jwsudq/image/upload/v1720356033/pexels-kooldark-14438787_vw3pnt.jpg" alt="Dr. Mary Hudson">
+                <h3>Dr. Mary Hudson</h3>
+                <p>Sample text. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+            <div class="doctor">
+                <img src="https://res.cloudinary.com/dh1jwsudq/image/upload/v1720356035/pexels-jrfotosgrand-fotografia-259137805-12660379_fkl6f4.jpg" alt="Dr. Tom Ford">
+                <h3>Dr. Tom Ford</h3>
+                <p>Sample text. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+            <div class="doctor">
+                <img src="https://res.cloudinary.com/dh1jwsudq/image/upload/v1720356046/pexels-shkrabaanthony-5215024_psejhk.jpg" alt="Dr. Lina Johnson">
+                <h3>Dr. Lina Johnson</h3>
+                <p>Sample text. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <form action="your-form-handler-url" method="post">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                <input type="submit" value="Send Message">
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2024 Medicine Center. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

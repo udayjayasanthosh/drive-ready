@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding:0px;
+            margin:0px;
+            background-color: orange;
+        }
+        .main
+        {
+            position: relative;
+            top:200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            width:75%;
+            height:250px;
+            font-size:100px;
+        }
+        #hours,#minutes,#seconds
+        {
+            width:30%;
+            height:100%;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+            color:white;
+            border-radius: 20px;
+        }
+        h1
+        {
+            width:5%;
+            height:100%;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size:50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div id="hours"></div>
+        <h1>:</h1>
+        <div id="minutes"></div>
+        <h1>:</h1>
+        <div id="seconds"></div>
+    </div>
+    <script>
+        function mytime()
+        {
+            var a=new Date();
+            if(a.getMinutes()==42)
+            {
+                clearInterval();
+            }
+            document.getElementById("hours").innerHTML=a.getHours();
+            document.getElementById("minutes").innerHTML=a.getMinutes();
+            document.getElementById("seconds").innerHTML=a.getSeconds();
+            setInterval(mytime,1000);
+        }
+        mytime();
+    </script>
+</body>
+</html>

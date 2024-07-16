@@ -7,11 +7,14 @@
     <style>
         body
         {
+            height: 100svh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             background-color: #2ec0d3;
+            padding: 0px;
+            margin:0px;
         }
         body > button
         {
@@ -57,7 +60,7 @@
     <script src="../java script/game.js">
     </script>
 </head>
-<body>
+<body onkeydown="keyoperation(event)">
     <button onclick="main()" id="start">start</button>
 </body>
 </html>

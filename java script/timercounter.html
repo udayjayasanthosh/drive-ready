@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #timer,#counter
+        {
+            width:100%;
+            height:50svh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+        }
+        #timer
+        {
+            border-bottom: 5px solid black;
+        }
+        #timing,#butting,#ctiming,#cbutting
+        {
+            width:75%;
+            height:45%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        #hour,#minutes,#sec,#chour,#cminutes,#csec
+        {
+            width:30%;
+            height:100%;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+            color:white;
+            border-radius: 20px;
+            font-size:100px;
+        }
+        h1
+        {
+            width:5%;
+            height:100%;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size:50px;
+        }
+       #butting,#cbutting
+       {
+        gap:5%;
+       }
+       #butting button,#cbutting button
+       {
+        width:20%;
+        height:50%;
+        border-radius: 10px;
+        border:hidden;
+        font-size: 25px;
+        text-transform: uppercase;
+       }
+       #chour,#cminutes,#csec
+       {
+        background-color:orange;
+       }
+    </style>
+</head>
+<body>
+    <div id="timer">
+        <div id="timing">
+            <div id="hour">00</div>
+            <h1>:</h1>
+            <div id="minutes">00</div>
+            <h1>:</h1>
+            <div id="sec">00</div>
+        </div>
+        <div id="butting">
+            <button  onclick="starting()"> start</button>
+            <button onclick="stop()"> stop</button>
+            <button  onclick="reset()">reset</button>
+        </div>
+    </div>
+    <div id="counter">
+        <div id="ctiming">
+            <div id="chour">00</div>
+            <h1>:</h1>
+            <div id="cminutes">00</div>
+            <h1>:</h1>
+            <div id="csec">00</div>
+        </div>
+        <div id="cbutting">
+            <button  onclick="cstart()"> start</button>
+            <button onclick="cstop()"> stop</button>
+        </div>
+    </div>
+    <script>
+        var hcount=0;
+        var mcount=0;
+        var scount=0;
+        function hours()
+        {
+            hcount+=1;
+            if(hcount>59)
+            {
+            hcount=0;
+            }
+            if(hcount<10)
+            document.getElementById("hour").innerHTML="0"+hcount;
+            else
+            document.getElementById("hour").innerHTML=hcount;
+        }
+        function minutes()
+        {
+            mcount+=1;
+            if(mcount>59)
+            {
+            mcount=0;
+            }
+            if(mcount<10)
+            document.getElementById("minutes").innerHTML="0"+mcount;
+            else
+            document.getElementById("minutes").innerHTML=mcount;
+        }
+        function seconds()
+        {
+            scount+=1;
+            if(scount>59)
+            {
+            scount=0;
+            }
+            if(scount<10)
+            document.getElementById("sec").innerHTML="0"+scount;
+            else
+            document.getElementById("sec").innerHTML=scount;
+        }
+        function reset()
+        {
+            clearInterval(h);
+            clearInterval(m);
+            clearInterval(s);
+            hcount=0;
+            mcount=0;
+            scount=0;
+            document.getElementById("hour").innerHTML="00";
+            document.getElementById("minutes").innerHTML="00";
+            document.getElementById("sec").innerHTML="00";
+            starting();
+        }
+        function stop()
+        {
+            clearInterval(h);
+            clearInterval(m);
+            clearInterval(s);
+        }
+        function starting()
+        {
+            h=setInterval(hours,3600000);
+            m=setInterval(minutes,60000);
+            s=setInterval(seconds,1000);
+        }
+        
+        function cstart()
+        {
+            chours=prompt("enter hours");
+            cminutes=prompt("enter minues");
+            cseconds=prompt("enter second");
+            a=setInterval(count,1000);
+        }
+        function count()
+        {
+            cseconds-=1;
+            if(cseconds==0 && cminutes>0)
+            {
+                cminutes-=1;
+                cseconds=59;
+            }
+            if(cseconds==0 && cminutes==0 && chours>0)
+            {
+                chours-=1;
+                cseconds=59;
+                cminutes=59;
+            }
+            if(cseconds==0 && cminutes==0 && chours==0)
+            {
+                document.getElementById("chour").innerHTML="00";
+                document.getElementById("cminutes").innerHTML="00";
+                document.getElementById("csec").innerHTML="00";
+                clearInterval(a);
+                return;
+            }
+            if(cminutes==0 && chours>0)
+            {
+                chours-=1;  
+                cminues=59;
+            }
+            if(chours<10)
+                document.getElementById("chour").innerHTML="0"+chours;
+                else
+                {
+                document.getElementById("chour").innerHTML=chours;
+                }
+            if(cminutes<10)
+            document.getElementById("cminutes").innerHTML="0"+cminutes;
+            else
+            {
+                document.getElementById("cminutes").innerHTML=cminutes;
+            }
+            if(cseconds<10)
+            {
+                document.getElementById("csec").innerHTML="0"+cseconds;
+            }
+            else
+            {
+                document.getElementById("csec").innerHTML=cseconds;
+            }
+        }
+        function cstop()
+        {
+            clearInterval(a);
+        }
+    </script>
+</body>
+</html>

@@ -4,19 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script>
-       
-        mytime();
-        function mytime()
-        {
-            var a=new Date();
-            document.write(a.getSeconds()+"is seconds");
-            setTimeout(5000);
-            mytime();
-        }
-    </script>
+   
 </head>
 <body>
-    <p id="time"> annnn</p>
+    <div id="time"></div>
+
+    <script>  
+        function mytime()
+        { 
+            var a=new Date();
+            document.getElementById("time").innerHTML=a.getHours()+":"+a.getMinutes()+":"+a.getSeconds();
+            setTimeout(mytime,1000);
+        }
+        mytime();
+    </script>
 </body>
 </html>

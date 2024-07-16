@@ -5,6 +5,7 @@ from kivy.uix.button import Button
 from kivy.uix.gridlayout import GridLayout
 from kivy.uix.textinput import TextInput
 from kivy.uix.image import AsyncImage
+from kivy.lang import Builder
 class MYgui(GridLayout):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
@@ -17,9 +18,9 @@ class MYgui(GridLayout):
         self.add_widget(Button(text="hello i am uday",background_color=(0.1,0.2,0.5,0.1)))
         self.add_widget(Button(text="hello i am uday",background_color=(0.5,0.5,0.5,0.1)))
         self.add_widget(Button(text="hello i am uday",background_color=(0.1,0.5,0.8,0.1)))
+        
 class myapp(App):
     def build(self):
-        
         return MYgui()
     def on_start(self):
         print("i am starting the app")
