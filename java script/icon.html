@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+    <style>
+        body
+        {
+            display: flex;
+        }
+        i{
+            height:fit-content;
+            font-size: 32px;
+        }
+        .division{
+            position: relative;
+            top:0;
+            left:0;
+            color:white;
+            width:0px;
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+            background-color:black;
+            border-radius: 10px;
+            transition: all 1s;
+            overflow: hidden;
+            font-size: 32px;
+        }
+        .Options:hover
+        {
+            text-shadow: 0px 0px 10px whitesmoke;
+        }
+    </style>
+    
+</head>
+<body>  
+   <div class="division" >
+        <div class="Options" >apple</div>
+        <div class="Options">banana</div>
+        <div class="Options" onclick="remove()">X</div>
+   </div>
+   <i class="fa-solid fa-list" onclick="show()"></i>
+   <script>
+    function show(){
+        var x = document.getElementsByClassName("division")[0];
+        x.style.width = "300px";
+    }
+    function remove(){
+        var x = document.getElementsByClassName("division")[0];
+        x.style.width = "0px";
+    }
+</script>
+</body>
+</html>

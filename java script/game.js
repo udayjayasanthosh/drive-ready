@@ -1,6 +1,19 @@
 var i=0;
 var j=0;
 
+var ri;
+var rj;
+
+var size;
+function randow()
+{
+    ri=Math.floor(Math.random() * (size));
+    rj=Math.floor(Math.random() * (size));
+    var posi=ri+"_"+rj;
+    console.log(posi);
+    var idd=document.getElementById(posi);
+    idd.style.backgroundColor="red";
+}
 function main()
 {
 
@@ -13,13 +26,11 @@ var grid=document.createElement("table");
 for(var a=0;a<size;a++)
 {
     var row=document.createElement("tr");
-    row.id=a;
     for(var b=0;b<size;b++)
     {
         var cell=document.createElement("td");
         cell.style="background-color:orange;";
         cell.id=a+"_"+b;
-        console.log(cell.id);
         row.appendChild(cell);
     }
     grid.appendChild(row);
@@ -27,6 +38,13 @@ for(var a=0;a<size;a++)
 document.body.appendChild(grid);
 display(i,j);
 
+var score=document.createElement("div");
+score.id="score";
+score.innerHTML=0;
+score.style="background-color:orange;width:50px;height:50px;color:black;text-align:center;display:flex;flex-direction:column;";
+document.body.appendChild(score);
+
+randow();
 var operation=document.createElement("div");
 operation.setAttribute("id","operation");
 document.body.appendChild(operation);
@@ -66,6 +84,13 @@ function righting()
     }
     else
     {
+        if(i==ri && j+1==rj)
+        {
+            var scoring=document.getElementById("score");
+            scoring.innerHTML=parseInt(scoring.innerHTML)+1;
+            undisplay(ri,rj);
+            randow();
+        }
         undisplay(i,j);
         display(i,j+1);
         j=j+1;
@@ -79,6 +104,13 @@ function lefting()
     }
     else
     {
+        if(i==ri && j-1==rj)
+            {
+                var scoring=document.getElementById("score");
+                scoring.innerHTML=parseInt(scoring.innerHTML)+1;
+                undisplay(ri,rj);
+                randow();
+            }
         undisplay(i,j);
         display(i,j-1);
         j=j-1;
@@ -91,6 +123,15 @@ function toping()
         alert("out of bounds");
     }
     else{
+
+        if(i-1==ri && j==rj)
+            {
+                var scoring=document.getElementById("score");
+                scoring.innerHTML=parseInt(scoring.innerHTML)+1;
+                undisplay(ri,rj);
+                randow();
+            }
+
         undisplay(i,j);
         display(i-1,j);
         i=i-1;
@@ -104,6 +145,12 @@ function downing()
     }
     else
     {
+        if(i+1==ri && j==rj)
+            {
+                randow();
+                var scoring=document.getElementById("score");
+                scoring.innerHTML=parseInt(scoring.innerHTML)+1;
+            }  
         undisplay(i,j);
         display(i+1,j);
         i=i+1;
@@ -115,4 +162,9 @@ function display(m,n)
     var c=m+"_"+n;
     var d=document.getElementById(c);
     d.style="background-color:black";
+}
+
+function keyoperation(event)
+{
+    console.log(event.code);
 }
